@@ -1,0 +1,93 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+html {
+    background-color: $white;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* ==========================================================
+Sass allow nesting :
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+  }
+}
+=========================================================*/
+
+/* ======================================================
+Sass allow partials scss files:
+
+ex : _variables.scss
+
+@use 'variables';
+
+.button {
+  color: variables.$primary-color;
+  font-size: variables.$font-size;
+}
+==========================================================*/
+
+
+
+/* =======================================================
+Sass allow Mixins:
+
+@mixin breakpoint($size) {
+  @if $size == mobile {
+    @media (min-width: 30em) {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  
+  @include breakpoint(mobile) {
+    flex-direction: row;
+  }
+}
+================================================================*/
+
+/* =======================================================
+Sass share properties with Extend :
+
+.message {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+================================================================*/
