@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 html {
   background-color: hsl(0, 0%, 100%);
 }
@@ -17,4 +23,72 @@ html {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* ==========================================================
+Sass allow nesting :
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding: 1em 2em;
+    text-decoration: none;
+  }
+}
+=========================================================*/
+/* ======================================================
+Sass allow partials scss files:
+
+ex : _variables.scss
+
+@use 'variables';
+
+.button {
+  color: variables.$primary-color;
+  font-size: variables.$font-size;
+}
+==========================================================*/
+/* =======================================================
+Sass allow Mixins:
+
+@mixin breakpoint($size) {
+  @if $size == mobile {
+    @media (min-width: 30em) {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media (min-width: 48em) {
+      @content;
+    }
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    flex-direction: row;
+  }
+}
+================================================================*/
+/* =======================================================
+Sass share properties with Extend :
+
+.message {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+================================================================*//*# sourceMappingURL=style.css.map */
