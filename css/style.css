@@ -12,9 +12,21 @@ button {
   cursor: pointer;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vw;
+  max-width: 100%;
+  padding: 0 5vw;
+}
+.card-container .card {
+  max-width: 100%;
+  padding: 0 5vw;
+}
+
 .header {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
 }
 .header .header__hero__img {
   width: 100%;
@@ -22,15 +34,53 @@ button {
 }
 .header .header__top {
   position: absolute;
-  top: 2vh; /* TBD */
+  top: 5vh; /* TBD */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5vw;
 }
-.header h1 {
+
+h1 {
   position: absolute;
-  top: 30vh; /* TBD */
+  top: 27vh; /* TBD */
+  color: hsl(0, 0%, 100%);
+  font-family: "Alata"; /* TBD */
+  margin: 0 5vw;
+  padding: 7vw;
+  border: 2px solid hsl(0, 0%, 100%);
 }
 
 html {
   background-color: hsl(0, 0%, 100%);
+}
+
+main {
+  max-width: 100vw;
+}
+
+.main__hero {
+  width: 100%;
+  margin: 10vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+}
+.main__hero .main__hero__img {
+  width: 100%;
+  height: auto;
+}
+.main__hero .main__hero__title {
+  font-family: "Alata"; /* TBD */
+  text-align: center;
+}
+.main__hero .main__hero__text {
+  color: hsl(0, 0%, 55%);
+  text-align: center;
+  padding: 0 5vw;
 }
 
 .navbar {
