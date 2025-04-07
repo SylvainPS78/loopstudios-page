@@ -22,15 +22,6 @@ a {
   cursor: auto; 
 }
 
-/* img {
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-} */
-
-/* Regrouper les H2 */
-
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 55%);
@@ -249,14 +240,14 @@ h1 {
     height: auto;
   }
 
-  .main__hero__title {
+   .main__hero__title {
     font-family: "Josefin Sans";
     font-weight: 300;
     color: $black;
     text-align: center;
     font-size: 2rem; /* a modifier */
-    margin-top:6vh;
     margin-bottom:3vh;
+    margin-top:6vh;
   }
 
   .main__hero__text {
@@ -350,58 +341,3 @@ h1 {
 
 */
 
-/* ======================================================
-Sass allow partials scss files:
-
-ex : _variables.scss
-
-@use 'variables';
-
-.button {
-  color: variables.$primary-color;
-  font-size: variables.$font-size;
-}
-==========================================================*/
-
-
-
-/* =======================================================
-Sass allow Mixins:
-
-@mixin breakpoint($size) {
-  @if $size == mobile {
-    @media (min-width: 30em) {
-      @content;
-    }
-  }
-  @else if $size == tablet {
-    @media (min-width: 48em) {
-      @content;
-    }
-  }
-}
-
-.testimonials {
-  display: flex;
-  flex-direction: column;
-  
-  @include breakpoint(mobile) {
-    flex-direction: row;
-  }
-}
-================================================================*/
-
-/* =======================================================
-Sass share properties with Extend :
-
-.message {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  color: #333;
-}
-
-.success {
-  @extend .message;
-  border-color: green;
-}
-================================================================*/
