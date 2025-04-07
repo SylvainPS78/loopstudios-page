@@ -12,10 +12,79 @@ button {
   cursor: pointer;
 }
 
+/* img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+} */
+
+/* Regrouper les H2 */
+
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 55%);
 $very-dark-gray: hsl(0, 0%, 41%);
+
+/* utiliser une variable pour font-size */
+/*  font-size: clamp(1.8rem, calc(7vw + 1rem), 5rem) */
+
+html {
+  font-family:"Alata";
+  font-size: 15px;
+  color: $very-dark-gray;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100vdh;
+  background-color: $white;
+}
+
+main {
+  max-width: 100vw; /* TBD */
+}
+ /* utiliser une variable pour le padding mobile */
+
+.navbar {
+  position: fixed;
+  top:0;
+  right: 0;
+  height: 100dvh; /* ou vh ? */
+  width: 100vw;  /* TBD : pour tablette je peux mettre partiel + overlay*/
+  z-index: 10;
+  background-color: $black;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
+}
+
+.navbar--show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.navbar__list {
+  width:100%; /* TBD */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 5vw;
+}
+
+.navbar__link {
+  width:100%;
+}
+
+.open-navbar-button {
+  display:block;
+}
+
+.close-navbar-button {
+  display:none;
+  z-index:11;
+}
 
 .card-container {
   display: flex;
@@ -23,21 +92,45 @@ $very-dark-gray: hsl(0, 0%, 41%);
   align-items: center;
   gap: 5vw;
   max-width:100%;
-  padding: 0 5vw;
+  padding: 0 5vw; /* utiliser un min(5rem, 8%) */
 
+  .card-container__title {
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: $black;
+    text-align: center;
+    font-size: 2rem; /* a modifier */
+  }
   .card {
     max-width: 100%;
     padding:0 5vw;
+    position: relative;
   }
-}
 
+  .card__img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card__title {
+    position:absolute;
+    bottom: 5vw;
+    padding-left: 5vw;
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: $white;
+    font-size: 1.5rem;
+  }
+
+}
 
 .header {
   max-width:100vw;
 
   .header__hero__img {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* TBD */
+    height: 100%; /* TBD */
   }
   
   .header__top {
@@ -48,32 +141,25 @@ $very-dark-gray: hsl(0, 0%, 41%);
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 5vw;
+    padding: 0 5vw;  /* utiliser un min(x-rem, y-%) */
   }
 }
 
 h1 {
   position: absolute;
-  top: 27vh; /* TBD */
+  top: 33dvh; /* TBD */
   color: $white;
-  font-family: "Alata"; /* TBD */
+  font-family: "Josefin Sans";
+  font-weight: 300;
+  font-size: 2.75rem;
   margin:0 5vw;
-  padding:7vw;
+  padding:7vw;  /* utiliser un min(x-rem, y-%) */
   border: 2px solid $white;
-}
-
-
-html {
-    background-color: $white;
-}
-
-main {
-  max-width: 100vw;
 }
 
 .main__hero {
   width:100%;
-  margin:10vh 5vw;
+  margin:15vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,24 +171,69 @@ main {
   }
 
   .main__hero__title {
-    font-family: "Alata"; /* TBD */
+    font-family: "Josefin Sans";
+    font-weight: 300;
+    color: $black;
     text-align: center;
+    font-size: 2rem; /* a modifier */
   }
 
   .main__hero__text {
     color:$dark-gray;
     text-align: center;
-    padding:0 5vw;
-  }
-}
-
-.navbar {
-  display:none;
+    padding:0 10vw;  /* utiliser un min(x-rem, y-%) */
+  } 
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+
+
+
+
+
+
+
+
+/*
+
+@media screen and (min-width:750px) {
+  .navbar {
+    background-color: ;
+  }
+  
+  .navbar__list {
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar__item {
+    display: flex;
+  }
+  
+  .navbar__link {
+    display: flex; 
+    text-decoration: none;
+    color: ;
+    padding: 1em 2em;
+    transition: border-bottom 300ms ease;
+  }
+  
+  .navbar__link:hover { + :focus 
+    border-bottom: 2px solid $white; 
+  }
+
+  .open-navbar-button {
+    display:none;
+  }
+  
+  .close-navbar-button {
+    display:none;
+  }
+}
+
+*/
 
 /* ==========================================================
 Sass allow nesting :
