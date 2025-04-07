@@ -6,6 +6,7 @@ const media = window.matchMedia("(width < 750px)")
 function openNavbar() {
     navbar.classList.add("navbar--show");
     openNavbarButton.setAttribute('aria-expended','true');
+    openNavbarButton.style.display = "none";
     navbar.removeAttribute('inert');
     closeNavbarButton.style.display = "block";
 }
@@ -15,6 +16,7 @@ function closeNavbar() {
     openNavbarButton.setAttribute('aria-expended','false');
     navbar.setAttribute('inert','');
     closeNavbarButton.style.display = "none";
+    openNavbarButton.style.display = "block";
 }
 
 function updateNavbar(e) {

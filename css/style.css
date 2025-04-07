@@ -36,16 +36,18 @@ html {
   font-size: 15px;
   color: hsl(0, 0%, 41%);
   font-weight: 400;
+  width: 100vw;
 }
 
 body {
   min-height: 100vh;
   min-height: 100vdh;
   background-color: hsl(0, 0%, 100%);
+  width: 100%;
 }
 
 main {
-  max-width: 100vw; /* TBD */
+  width: 100%;
 }
 
 /* utiliser une variable pour le padding mobile */
@@ -69,18 +71,41 @@ main {
 
 .navbar__list {
   width: 100%; /* TBD */
+  padding-left: 5vw;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 5vw;
+  gap: 4vh;
+  height: 100%;
 }
 
 .navbar__link {
   width: 100%;
+  color: hsl(0, 0%, 100%);
+  font-size: 1.75rem;
+  margin-left: 5vw;
+  font-family: "Josefin Sans";
+  font-weight: 300;
+}
+
+.navbar__link:hover,
+.footer__navbar__link:hover,
+.footer__attribution a:hover {
+  border-bottom: 2px solid hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .open-navbar-button {
   display: block;
+}
+
+.open-navbar-icon:hover > g > path {
+  fill: hsl(0, 0%, 0%);
+}
+
+.logo {
+  z-index: 11;
 }
 
 .close-navbar-button {
@@ -103,11 +128,32 @@ main {
   color: hsl(0, 0%, 0%);
   text-align: center;
   font-size: 2rem; /* a modifier */
+  margin-bottom: 3vh;
 }
 .card-container .card {
   max-width: 100%;
   padding: 0 5vw;
   position: relative;
+}
+.card-container .card:hover {
+  cursor: pointer;
+}
+.card-container .card:hover > .card__title {
+  color: hsl(0, 0%, 0%);
+}
+.card-container .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease;
+  z-index: 5;
+}
+.card-container .card:hover::after {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .card-container .card__img {
   max-width: 100%;
@@ -123,19 +169,27 @@ main {
   font-weight: 300;
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
+  z-index: 8;
 }
 .card-container .see-all-button {
   font-family: "Alata";
   font-weight: 400;
   color: hsl(0, 0%, 0%);
   border: 1px solid hsl(0, 0%, 0%);
-  padding: 5vw 10vw; /* A MODIFIER */
+  padding: 3vw 10vw; /* A MODIFIER */
   letter-spacing: 0.5rem;
   font-size: 1rem;
+  margin-top: 2vh;
+  transition: background-color 300ms ease;
+  transition: color 300ms ease;
+}
+.card-container .see-all-button:hover {
+  background: hsl(0, 0%, 0%);
+  color: hsl(0, 0%, 100%);
 }
 
 .header {
-  max-width: 100vw;
+  width: 100%;
 }
 .header .header__hero__img {
   width: 100%; /* TBD */
@@ -166,11 +220,10 @@ h1 {
 
 .main__hero {
   width: 100%;
-  margin: 15vh 5vw;
+  padding: 12vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5vh;
 }
 .main__hero .main__hero__img {
   width: 100%;
@@ -182,12 +235,14 @@ h1 {
   color: hsl(0, 0%, 0%);
   text-align: center;
   font-size: 2rem; /* a modifier */
+  margin-top: 6vh;
+  margin-bottom: 3vh;
 }
 .main__hero .main__hero__text {
   color: hsl(0, 0%, 55%);
   text-align: center;
   line-height: 1.75;
-  padding: 0 10vw; /* utiliser un min(x-rem, y-%) */
+  padding: 0 9vw; /* utiliser un min(x-rem, y-%) */
 }
 
 .footer__container {
@@ -206,9 +261,13 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 5vw;
+  width: 100%;
 }
 .footer__container .footer__link-icon {
   color: hsl(0, 0%, 100%);
+}
+.footer__container .footer__link-icon:hover {
+  cursor: pointer;
 }
 .footer__container .footer__navbar__item {
   text-align: center;
