@@ -6,7 +6,7 @@ const headerLogo = document.getElementById("header__logo");
 
 function openNavbar() {
     navbar.classList.add("navbar--show");
-    openNavbarButton.setAttribute('aria-expended','true');
+    openNavbarButton.setAttribute('aria-expanded','true');
     openNavbarButton.style.display = "none";
     navbar.removeAttribute('inert');
     closeNavbarButton.style.display = "block";
@@ -17,7 +17,7 @@ function openNavbar() {
 
 function closeNavbar() {
     navbar.classList.remove("navbar--show");
-    openNavbarButton.setAttribute('aria-expended','false');
+    openNavbarButton.setAttribute('aria-expanded','false');
     navbar.setAttribute('inert','');
     closeNavbarButton.style.display = "none";
     openNavbarButton.style.display = "block";
