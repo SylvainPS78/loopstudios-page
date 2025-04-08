@@ -18,7 +18,7 @@
     <header class="header">
       <div class="header__top">
         <img id="header__logo" src="./images/logo.svg" alt="loopstudios logo" width="192" height="32">
-        <button class="open-navbar-button" aria-label="open sidebar" data-expanded="false" aria-controls="navbar">
+        <button class="open-navbar-button" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
           <svg class="open-navbar-icon" aria-hidden="true" focusable="false" width="24" height="16" xmlns="http://www.w3.org/2000/svg">
             <g fill="#FFFFFF" fill-rule="evenodd">
               <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"/>
@@ -46,7 +46,7 @@
       </div>
     </header>
        
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main menu">
       <ul class="navbar__list">
         <li class="navbar__item"><a href="#about" class="navbar__link">ABOUT</a></li>
         <li class="navbar__item"><a href="#careers" class="navbar__link">CAREERS</a></li>
@@ -74,7 +74,7 @@
 
       <section class="card-container">
         <h2 class="card-container__title">OUR CREATIONS</h2>
-        <article class="card"> 
+        <article class="card" role="listitem"> 
           <picture>
             <source media="(min-width: 750px)" srcset="./images/desktop/image-deep-earth.jpg">
             <source media="(max-width: 749px)" srcset="./images/mobile/image-deep-earth.jpg">
@@ -146,14 +146,14 @@
           <h3 class="card__title">MAKE IT<br>FISHEYE</h3>
         </article> 
 
-        <button class="see-all-button" aria-label="Button to see all our creations">SEE ALL</button>
+        <button class="see-all-button" aria-label="Button to see all our creations" type="button">SEE ALL</button>
       </section>
     </main>
   
-    <footer class="footer__container">
+    <footer class="footer__container" role="contentinfo">
       <img id="#footer__logo" class="logo" src="./images/logo.svg" alt="loopstudios logo" width="192" height="32">
 
-      <nav class="footer__navbar">
+      <nav class="footer__navbar" aria-label="Secondary menu">
         <ul class="footer__navbar__list">
           <li class="footer__navbar__item"><a href="#about" class="footer__navbar__link">About</a></li>
           <li class="footer__navbar__item"><a href="#careers" class="footer__navbar__link">Careers</a></li>
@@ -196,8 +196,8 @@
       <p class="footer__copyright">© 2021 Loopstudios. All rights reserved.</p>
 
       <div class="footer__attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Sylvain Web</a>.
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
+        Coded by <a href="#" target="_blank" rel="noopener">Sylvain Web</a>.
       </div>
     </footer>
 
