@@ -305,6 +305,10 @@ h1 {
   color: hsl(0, 0%, 100%);
 }
 
+.footer__copyright {
+  color: hsl(0, 0%, 55%);
+}
+
 @media (width > 749px) {
   .header__top {
     top: 5vh;

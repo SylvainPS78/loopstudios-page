@@ -308,6 +308,10 @@ h1 {
   color: $white;
 }
 
+.footer__copyright {
+  color: $dark-gray;
+}
+
 @media (width > 749px) {
   .header__top {
     top: 5vh; 
