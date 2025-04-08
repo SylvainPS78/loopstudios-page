@@ -7,30 +7,34 @@ const headerLogo = document.getElementById("header__logo");
 function openNavbar() {
     navbar.classList.add("navbar--show");
     openNavbarButton.setAttribute('aria-expanded','true');
-    openNavbarButton.style.display = "none";
+    openNavbarButton.classList.remove("button--show");
+    closeNavbarButton.classList.add("button--show");
     navbar.removeAttribute('inert');
-    closeNavbarButton.style.display = "block";
     headerLogo.style.position = "fixed";
     headerLogo.style.top = "5vh";
     headerLogo.style.left = "5vw";
+    closeNavbarButton.removeAttribute('inert');
  }
 
 function closeNavbar() {
     navbar.classList.remove("navbar--show");
+    openNavbarButton.classList.add("button--show");
     openNavbarButton.setAttribute('aria-expanded','false');
+    closeNavbarButton.classList.remove("button--show");
     navbar.setAttribute('inert','');
-    closeNavbarButton.style.display = "none";
-    openNavbarButton.style.display = "block";
     headerLogo.style.position = "static";
+    closeNavbarButton.setAttribute('inert','');
 }
 
 function updateNavbar(e) {
     const isMobile = e.matches;
     if (isMobile){
         navbar.setAttribute('inert','');
+        openNavbarButton.removeAttribute('inert');
     }
     else {
         navbar.removeAttribute('inert');
+        openNavbarButton.setAttribute('inert','');
     }
 }
 
