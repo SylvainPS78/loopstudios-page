@@ -57,12 +57,10 @@ main {
   pointer-events: none;
   transition: opacity 300ms ease;
 }
-
 .navbar--show {
   opacity: 1;
   pointer-events: all;
 }
-
 .navbar__list {
   width: 100%;
   padding-left: 5vw;
@@ -73,7 +71,6 @@ main {
   gap: 4vh;
   height: 100%;
 }
-
 .navbar__link {
   width: 100%;
   color: hsl(0, 0%, 100%);
@@ -134,7 +131,6 @@ main {
   padding: 0 5vw;
   margin-bottom: 15vh;
 }
-
 .card-container__title {
   font-family: "Josefin Sans";
   font-weight: 300;
@@ -166,15 +162,12 @@ main {
   font-size: clamp(19px, 2vw + 1rem, 30px);
   z-index: 8;
 }
-
 .card:hover {
   cursor: pointer;
 }
-
 .card:hover > .card__title {
   color: hsl(0, 0%, 0%);
 }
-
 .card::after {
   content: "";
   position: absolute;
@@ -186,7 +179,6 @@ main {
   transition: background-color 0.3s ease;
   z-index: 5;
 }
-
 .card:hover::after {
   background-color: rgba(255, 255, 255, 0.5);
 }
@@ -202,7 +194,6 @@ main {
   margin-top: 2vh;
   transition: color 300ms ease;
 }
-
 .see-all-button:hover {
   transition: background-color 300ms ease;
   background-color: hsl(0, 0%, 0%);
@@ -212,12 +203,11 @@ main {
 .header {
   width: 100%;
 }
-
 .header__hero__img {
   width: 100%;
   height: 100%;
+  min-width: 320px;
 }
-
 .header__top {
   position: absolute;
   top: 5vh;
@@ -241,20 +231,18 @@ h1 {
   border: 2px solid hsl(0, 0%, 100%);
 }
 
-.main__hero {
+.hero {
   width: 100%;
   padding: 12vh 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-.main__hero__img {
+.hero__img {
   width: 100%;
   height: auto;
 }
-
-.main__hero__title {
+.hero__title {
   font-family: "Josefin Sans";
   font-weight: 300;
   color: hsl(0, 0%, 0%);
@@ -263,8 +251,7 @@ h1 {
   margin-bottom: 3vh;
   margin-top: 6vh;
 }
-
-.main__hero__content {
+.hero__content {
   color: hsl(0, 0%, 41%);
   text-align: center;
   line-height: 1.75;
@@ -295,7 +282,6 @@ h1 {
 .footer__link-icon {
   color: hsl(0, 0%, 100%);
 }
-
 .footer__link-icon:hover {
   cursor: pointer;
 }
@@ -309,7 +295,6 @@ h1 {
   text-align: center;
   color: hsl(0, 0%, 55%);
 }
-
 .footer__attribution a {
   color: hsl(0, 0%, 100%);
 }
@@ -372,31 +357,31 @@ h1 {
     font-weight: 300;
     align-self: center;
   }
-  .main__hero {
+  .hero {
     width: 100%;
     max-height: max(50vw, 50vh);
     padding: 12vh 12vw;
     display: block;
     position: relative;
   }
-  .main__hero__img {
+  .hero__img {
     width: 60%;
     position: relative;
   }
-  .main__hero__text {
+  .hero__text {
     position: absolute;
     top: 40%;
     left: 47.5%;
     padding: 6vh 12vw 6vh 6vw;
     background-color: hsl(0, 0%, 100%);
   }
-  .main__hero__title {
+  .hero__title {
     margin-bottom: 0;
     margin-top: 0;
     font-size: clamp(26px, 4vw + 1rem, 38px);
     text-align: left;
   }
-  .main__hero__content {
+  .hero__content {
     padding: 0;
     padding-top: 2vh;
     text-align: left;
@@ -404,12 +389,19 @@ h1 {
     font-size: clamp(15px, 1vw + 0.333rem, 25px);
   }
   .card-container {
-    margin-top: 5vh;
+    margin-top: 10vh;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 3fr 10fr 10fr;
     padding: 0 12vw;
     gap: 2vw;
+  }
+  .card-container__title {
+    grid-row: 1;
+    grid-column: 1/3;
+    margin: 0;
+    justify-self: left;
+    align-self: center;
   }
   .card {
     height: 100%;
@@ -423,16 +415,6 @@ h1 {
     left: 2vw;
     padding: 0;
     font-size: clamp(19px, 0.5vw + 1rem, 30px);
-  }
-  .card-container {
-    margin-top: 10vh;
-  }
-  .card-container__title {
-    grid-row: 1;
-    grid-column: 1/3;
-    margin: 0;
-    justify-self: left;
-    align-self: center;
   }
   .see-all-button {
     grid-row: 1;
@@ -495,10 +477,10 @@ h1 {
   .footer__container {
     padding: 4vh 5vw;
   }
-  .main__hero {
+  .hero {
     padding: 12vh 5vw;
   }
-  .main__hero__text {
+  .hero__text {
     padding: 5vh 5vw 5vh 5vw;
   }
   .card__title {
