@@ -33,7 +33,7 @@ html {
 
 body {
   min-height: 100vh;
-  min-height: 100vdh;
+  min-height: 100dvh;
   background-color: hsl(0, 0%, 100%);
   width: 100%;
   min-width: 100%;
@@ -427,8 +427,8 @@ h1 {
     padding: 4vh 12vw;
     top: 5vh;
     display: grid;
-    grid-template-columns: 2;
-    grid-template-rows: 3;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr;
     gap: 1vh;
   }
   #footer__logo {
