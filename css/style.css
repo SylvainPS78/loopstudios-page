@@ -325,7 +325,7 @@ h1 {
 
 @media (width > 749px) {
   .header__top {
-    top: 5vh;
+    top: clamp(5px, 5vh, 50px);
     padding: 0 12vw;
   }
   .open-navbar-button,
@@ -333,7 +333,7 @@ h1 {
     display: none;
   }
   h1 {
-    top: min(20vh, 20vw);
+    top: clamp(50px, min(20vh, 20vw), 138px);
     margin: 0 12vw;
     padding: 3vw;
     max-width: 45vw;
@@ -345,7 +345,7 @@ h1 {
   }
   .navbar {
     opacity: 1;
-    margin-top: 5vh;
+    margin-top: clamp(5px, 5vh, 50px);
     padding-right: 12vw;
     position: absolute;
     height: auto;
