@@ -177,7 +177,7 @@ main {
     cursor: pointer;
   }
 
-  &:hover > &__title {
+  &:hover > a > &__title {
     color:$black;
   }
 
