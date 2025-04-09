@@ -419,7 +419,7 @@ h1 {
   }
   .card__title {
     position: absolute;
-    bottom: 2vh;
+    bottom: 3vh;
     left: 2vw;
     padding: 0;
     font-size: clamp(19px, 0.5vw + 1rem, 30px);
